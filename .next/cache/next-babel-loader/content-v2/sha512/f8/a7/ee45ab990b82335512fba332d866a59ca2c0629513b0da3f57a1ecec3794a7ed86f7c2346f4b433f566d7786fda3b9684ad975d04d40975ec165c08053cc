@@ -1,0 +1,1 @@
+{"ast":null,"code":"// REDUX ACTION TYPES\nexport var HANDLE_LOGIN = 'HANDLE_LOGIN';\nexport var SIGN_UP = 'SIGN_UP';\nexport var SIGN_IN = 'SIGN_IN';\nexport var FORGET_PASSWORD = 'FORGET_PASSWORD';\nexport var CONFIRM_EMAIL = 'CONFIRM_EMAIL';\nexport var HANDLE_MODAL = 'HANDLE_MODAL';","map":null,"metadata":{},"sourceType":"module"}

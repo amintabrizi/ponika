@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { HANDLE_LOGIN } from './../types/types';\nexport default function loginReducer(loginState = false, action) {\n  switch (action.type) {\n    case HANDLE_LOGIN:\n      return !loginState;\n\n    default:\n      return loginState;\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

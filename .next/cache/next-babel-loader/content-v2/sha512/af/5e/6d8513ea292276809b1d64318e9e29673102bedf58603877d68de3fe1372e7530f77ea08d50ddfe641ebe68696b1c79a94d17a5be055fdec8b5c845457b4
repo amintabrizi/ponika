@@ -1,0 +1,1 @@
+{"ast":null,"code":"// REDUX ACTION TYPES\nexport var TOGGLE_LOGIN = 'TOGGLE_LOGIN';","map":{"version":3,"sources":["C:/Users/Administrator/Desktop/anar/src/redux/types/types.js"],"names":["TOGGLE_LOGIN"],"mappings":"AAAA;AACA,OAAO,IAAMA,YAAY,GAAG,cAArB","sourcesContent":["// REDUX ACTION TYPES\nexport const TOGGLE_LOGIN = 'TOGGLE_LOGIN';\n"]},"metadata":{},"sourceType":"module"}

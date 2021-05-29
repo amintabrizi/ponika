@@ -1,0 +1,43 @@
+@import "./moduleVariables";
+
+.modalHeader {
+  height: 3rem;
+}
+
+.modalTitle {
+  position: absolute;
+  top: 26px;
+  background: white;
+  padding: 0 5px;
+  left: 1rem;
+}
+
+.close {
+  right: 1rem;
+  top: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.divider {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  color: #6e6d7a;
+  text-align: center;
+}
+.divider:after {
+  content: "Or";
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  font: normal 14px/14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  padding: 0 16px;
+  background: #fff;
+}
+
+.pomegranateSection {
+  background: #fba1a1;
+}
