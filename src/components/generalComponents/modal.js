@@ -12,7 +12,7 @@ import {
 //import Components
 import SignIn from "../loginComponents/signIn";
 import SignUp from "../loginComponents/signUp";
-import ForgetPassword from "../loginComponents/ForgetPassword";
+import ForgetPassword from "./../loginComponents/forgetPassword";
 
 //import styles
 import style from "./../../styles/modal.module.scss";

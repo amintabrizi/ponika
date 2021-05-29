@@ -3094,7 +3094,7 @@ exports.ST = ST;
 
 /***/ }),
 
-/***/ 8858:
+/***/ 8062:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3911,86 +3911,86 @@ function SignUp(props) {
     className: "text-primary cursor-pointer"
   }, "Sign In"))));
 }
-;// CONCATENATED MODULE: ./src/components/loginComponents/ForgetPassword.js
+;// CONCATENATED MODULE: ./src/components/loginComponents/forgetPassword.js
 
-var ForgetPassword_jsx = (external_react_default()).createElement;
+var forgetPassword_jsx = (external_react_default()).createElement;
 
 
 
 
 function ForgetPassword(props) {
-  return ForgetPassword_jsx((external_react_default()).Fragment, null, ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Header, {
+  return forgetPassword_jsx((external_react_default()).Fragment, null, forgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Header, {
     className: `${(modal_module_default()).modalHeader} position-relative`
-  }, ForgetPassword_jsx("button", {
+  }, forgetPassword_jsx("button", {
     onClick: () => props.modalAction(),
     type: "button",
     className: `${(modal_module_default()).close} position-absolute bg-white border border-white p-0`
-  }, ForgetPassword_jsx(next_image.default, {
+  }, forgetPassword_jsx(next_image.default, {
     src: "/svg/close.svg",
     height: 30,
     width: 30
-  })), ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Title, {
+  })), forgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Title, {
     className: `${(modal_module_default()).modalTitle} font-weight-normal`,
     id: "contained-modal-title-vcenter"
-  }, "Forget Password")), ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Body, {
+  }, "Forget Password")), forgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Body, {
     className: "mx-4 px-0"
-  }, ForgetPassword_jsx("div", {
+  }, forgetPassword_jsx("div", {
     className: "social-login d-flex my-4 pb-2"
-  }, ForgetPassword_jsx(next_link.default, {
+  }, forgetPassword_jsx(next_link.default, {
     href: "http://google.com",
     passHref: true
-  }, ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Button, {
+  }, forgetPassword_jsx(external_react_bootstrap_namespaceObject.Button, {
     className: "border mr-3 flex-grow-1",
     variant: "light"
-  }, ForgetPassword_jsx("img", {
+  }, forgetPassword_jsx("img", {
     src: "/svg/google.svg",
     className: "mr-1",
     height: 24,
     width: 24
-  }), "Sign up with Google")), ForgetPassword_jsx(next_link.default, {
+  }), "Sign up with Google")), forgetPassword_jsx(next_link.default, {
     href: "http://facebook.com",
     passHref: true
-  }, ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Button, {
+  }, forgetPassword_jsx(external_react_bootstrap_namespaceObject.Button, {
     variant: "info"
-  }, ForgetPassword_jsx("img", {
+  }, forgetPassword_jsx("img", {
     src: "/svg/facebook.svg",
     height: 24,
     width: 24
-  })))), ForgetPassword_jsx("hr", {
+  })))), forgetPassword_jsx("hr", {
     className: `${(modal_module_default()).divider} divider my-4`
-  }), ForgetPassword_jsx("div", {
+  }), forgetPassword_jsx("div", {
     className: "social-login d-flex mt-4"
-  }, ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Form, {
+  }, forgetPassword_jsx(external_react_bootstrap_namespaceObject.Form, {
     className: "w-100",
     onSubmit: e => handleSubmit(e),
     noValidate: true
-  }, ForgetPassword_jsx("p", null, "Enter the email address you used when you joined and we\u2019ll send you new code to reset your password."), ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Form.Group, {
+  }, forgetPassword_jsx("p", null, "Enter the email address you used when you joined and we\u2019ll send you new code to reset your password."), forgetPassword_jsx(external_react_bootstrap_namespaceObject.Form.Group, {
     className: "mb-4 position-relative",
     controlId: "formGroupEmail"
-  }, ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Form.Control, {
+  }, forgetPassword_jsx(external_react_bootstrap_namespaceObject.Form.Control, {
     type: "email",
     placeholder: "Enter email"
-  }), ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Form.Control.Feedback, {
+  }), forgetPassword_jsx(external_react_bootstrap_namespaceObject.Form.Control.Feedback, {
     type: "invalid",
     tooltip: true
-  })), ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Col, {
+  })), forgetPassword_jsx(external_react_bootstrap_namespaceObject.Col, {
     className: "my-4"
-  }, ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Button, {
+  }, forgetPassword_jsx(external_react_bootstrap_namespaceObject.Button, {
     type: "submit",
     size: "md",
     block: true,
     variant: "danger"
-  }, "Submit"))))), ForgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Footer, {
+  }, "Submit"))))), forgetPassword_jsx(external_react_bootstrap_namespaceObject.Modal.Footer, {
     className: "d-flex justify-content-between"
-  }, ForgetPassword_jsx("div", {
+  }, forgetPassword_jsx("div", {
     onClick: () => props.signInAction(),
     className: "py-2"
-  }, "Already a member?", " ", ForgetPassword_jsx("span", {
+  }, "Already a member?", " ", forgetPassword_jsx("span", {
     className: "text-primary cursor-pointer"
-  }, "Sign In")), ForgetPassword_jsx("div", {
+  }, "Sign In")), forgetPassword_jsx("div", {
     onClick: () => props.signUpAction(),
     className: "py-2"
-  }, "Not a member?", " ", ForgetPassword_jsx("span", {
+  }, "Not a member?", " ", forgetPassword_jsx("span", {
     className: "text-primary cursor-pointer"
   }, "Sign up now"))));
 }
@@ -4232,7 +4232,7 @@ module.exports = require("react");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__(8858));
+var __webpack_exports__ = (__webpack_exec__(8062));
 module.exports = __webpack_exports__;
 
 })();
