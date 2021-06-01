@@ -5,13 +5,15 @@ import Image from "next/image";
 import {
   modalAction,
   signUpAction,
+  signUpPendingAction,
   signInAction,
   forgetPasswordAction,
 } from "./../../redux/actions/actions";
 
 //import Components
-import SignIn from "../loginComponents/signIn";
 import SignUp from "../loginComponents/signUp";
+import SignUpPending from "./../loginComponents/signUpPending";
+import SignIn from "../loginComponents/signIn";
 import ForgetPassword from "./../loginComponents/forgetPassword";
 
 //import styles
@@ -19,20 +21,28 @@ import style from "./../../styles/modal.module.scss";
 
 function ModalComponent(props) {
   let HandleLoginComponent = () => {
+    if (props.loginMethodState === "sign_up") {
+      return (
+        <SignUp
+          signInAction={props.signInAction}
+          signUpPendingAction={props.signUpPendingAction}
+          modalAction={props.modalAction}
+        />
+      );
+    }
+    if (props.loginMethodState === "sign_up_pending") {
+      return (
+        <SignUpPending
+          modalAction={props.modalAction}
+        />
+      );
+    }
     if (props.loginMethodState === "sign_in") {
       return (
         <SignIn
           signUpAction={props.signUpAction}
           modalAction={props.modalAction}
           forgetPasswordAction={props.forgetPasswordAction}
-        />
-      );
-    }
-    if (props.loginMethodState === "sign_up") {
-      return (
-        <SignUp
-          signInAction={props.signInAction}
-          modalAction={props.modalAction}
         />
       );
     }
@@ -76,6 +86,7 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   modalAction,
   signUpAction,
+  signUpPendingAction,
   signInAction,
   forgetPasswordAction,
 })(ModalComponent);

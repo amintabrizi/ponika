@@ -54,7 +54,9 @@ export default function SignUp(props) {
       setErrors(fullnameValidationErrors);
       return;
     } else {
-      setErrors({});
+      let state = { ...errors };
+      delete state.fullName;
+      setErrors(state);
       return;
     }
   }
@@ -99,7 +101,9 @@ export default function SignUp(props) {
       return;
     }
     else {
-      setErrors({});
+      let state = { ...errors };
+      delete state.userName;
+      setErrors(state);
     }
     axiosRequest.post('/user/existencecheck', {
       "user": {
@@ -113,7 +117,9 @@ export default function SignUp(props) {
           setErrors(usernameValidationErrors);
           return;
         } else {
-          setErrors({});
+          let state = { ...errors };
+          delete state.userName;
+          setErrors(state);
         }
       })
       .catch((err) => {
@@ -156,7 +162,9 @@ export default function SignUp(props) {
             setErrors(emailValidationErrors)
             return;
           } else {
-            setErrors({});
+            let state = { ...errors };
+            delete state.email;
+            setErrors(state);
           }
         })
         .catch((err) => {
@@ -186,7 +194,9 @@ export default function SignUp(props) {
       return;
     }
     else {
-      setErrors({});
+      let state = { ...errors };
+      delete state.password;
+      setErrors(state);
     }
   }
 
@@ -355,15 +365,48 @@ export default function SignUp(props) {
       })
   }
 
+  const findEmailErrors = () => {
+
+    const { email } = form
+
+
+    axiosRequest.post('/user/existencecheck', {
+      "user": {
+        "email": email,
+      },
+      "findOption": 1
+    })
+      .then((res) => {
+        if (res.data.status) {
+          setErrors(prevstate => ({
+            ...prevstate, email: 'This email has already been taken. Please pick another username'
+          }));
+          //return existenceCheckErrors
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
 
   const handleSubmit = e => {
     e.preventDefault()
     // get our new errors
     findFormErrors();
     findUsernameErrors();
+    findEmailErrors();
     // Conditional logic:
     if (Object.keys(errors).length === 0) {
-      console.log('ok');
+      axiosRequest.post('user/setuser', { ...form })
+        .then((res) => {
+          console.log(res);
+          if (res.data.status) {
+            props.signUpPendingAction();
+            console.log('signup is ok');
+          }
+        }
+        )
+        .catch(error => console.log(error))
     }
   }
 

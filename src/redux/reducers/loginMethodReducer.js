@@ -1,5 +1,6 @@
 import {
   SIGN_UP,
+  SIGN_UP_PENDING,
   SIGN_IN,
   FORGET_PASSWORD,
   CONFIRM_EMAIL,
@@ -12,6 +13,8 @@ export default function loginMethodReducer(
   switch (action.type) {
     case SIGN_UP:
       return "sign_up";
+    case SIGN_UP_PENDING:
+      return "sign_up_pending";
     case SIGN_IN:
       return "sign_in";
     case FORGET_PASSWORD:
